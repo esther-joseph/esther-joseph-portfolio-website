@@ -1,0 +1,47 @@
+html {
+  scroll-behavior: smooth;
+  /* Prevent anchor targets from hiding under fixed header */
+  scroll-padding-top: 5rem;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  line-height: var(--leading-normal);
+  color: var(--color-text);
+  background: radial-gradient(
+      1200px 700px at 20% 10%,
+      rgba(184, 169, 201, 0.25),
+      transparent 55%
+    ),
+    radial-gradient(
+      900px 600px at 85% 15%,
+      rgba(245, 240, 235, 0.9),
+      transparent 50%
+    ),
+    var(--color-bg);
+  background-attachment: fixed;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
