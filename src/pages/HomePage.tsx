@@ -338,6 +338,14 @@ export function HomePage() {
                 </li>
               ))}
             </ul>
+            <h4 className={styles.skillsSubcategory}>Creative</h4>
+            <ul className={styles.skillsChips}>
+              {xr.creative.map((s) => (
+                <li key={`creative-${s}`} className={styles.skillChip}>
+                  {s}
+                </li>
+              ))}
+            </ul>
           </section>
         </div>
       </section>
