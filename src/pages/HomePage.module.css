@@ -14,6 +14,12 @@
   justify-content: center;
 }
 
+.heroThreeWrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
 .parallaxLayer {
   position: absolute;
   inset: -20%;
@@ -236,6 +242,65 @@
   text-decoration: underline;
 }
 
+.inlineLink {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.inlineLink:hover {
+  color: var(--color-primary-strong);
+  text-decoration: underline;
+}
+
+/* Hackathon & VR (Devpost) */
+.devpostSection {
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+}
+
+.devpostList {
+  list-style: none;
+  margin: 0 0 var(--space-4);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.devpostItem {
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.devpostItem:last-of-type {
+  border-bottom: none;
+}
+
+.devpostName {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.devpostHighlight {
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.devpostStack {
+  display: block;
+  margin-top: var(--space-1);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.devpostDescription {
+  margin: var(--space-2) 0 0;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: var(--leading-normal);
+}
+
 /* Experience */
 .experienceList {
   list-style: none;
@@ -301,11 +366,12 @@
 .skillsGrid {
   display: grid;
   gap: var(--space-6);
+  grid-template-columns: 1fr 1fr;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 640px) {
   .skillsGrid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
