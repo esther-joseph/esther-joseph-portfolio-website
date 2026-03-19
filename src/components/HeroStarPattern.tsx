@@ -17,13 +17,13 @@ export function HeroStarPattern() {
             <polygon
               points={STAR_POINTS}
               fill="none"
-              stroke="rgba(123, 104, 166, 0.35)"
+              stroke="rgba(123, 104, 166, 0.28)"
               strokeWidth="0.8"
             />
             <polygon
               points={STAR_POINTS}
               fill="none"
-              stroke="rgba(123, 104, 166, 0.35)"
+              stroke="rgba(123, 104, 166, 0.28)"
               strokeWidth="0.8"
               transform="translate(24, 48)"
             />

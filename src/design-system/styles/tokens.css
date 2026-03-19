@@ -1,17 +1,20 @@
 :root {
-  /* Lavender & vanilla color scheme */
-  --color-bg: #faf8f5;
-  --color-surface: #f5f0eb;
-  --color-surface-elevated: #efe8e0;
-  --color-border: rgba(118, 99, 140, 0.2);
+  /* Oatmeal-inspired (Tailwind Oatmeal kit): warm neutrals + soft lavender accent */
+  --color-bg: #f5f0e8;
+  --color-surface: #ede6dc;
+  --color-surface-elevated: #e8dfd4;
+  --color-border: rgba(61, 54, 50, 0.12);
 
-  --color-text: #2d2a32;
-  --color-text-muted: #5c5666;
+  --color-text: #3d3632;
+  --color-text-muted: #6b6259;
 
   --color-primary: #7b68a6;
   --color-primary-strong: #5c4d7a;
   --color-danger: #b8546a;
   --color-success: #4a7c6c;
+
+  /* Oatmeal accent - warm tan for highlights if needed */
+  --color-oatmeal: #d1b399;
 
   /* Typography */
   --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
@@ -31,11 +34,10 @@
   --space-8: 2rem;
   --space-10: 2.5rem;
 
-  /* Radius */
-  --radius-sm: 10px;
-  --radius-md: 14px;
+  /* Radius (slightly softer, Oatmeal-style) */
+  --radius-sm: 8px;
+  --radius-md: 12px;
 
-  /* Shadow (subtle, warm) */
-  --shadow-sm: 0 6px 18px rgba(92, 77, 122, 0.12);
+  /* Shadow (warm, subtle) */
+  --shadow-sm: 0 4px 14px rgba(61, 54, 50, 0.08);
 }
-
