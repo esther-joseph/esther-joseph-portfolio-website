@@ -34,6 +34,32 @@ export const experience = [
   },
 ] as const;
 
+/** XR/VR-focused experience (from XR resume) */
+export const experienceXr = [
+  {
+    company: "Ellumen (Contracted by Department of Homeland Security)",
+    location: "Remote",
+    role: "Software Developer",
+    period: "January 2022 – Present",
+    bullets: [
+      "Developed an AI-powered AR communication interface for HoloLens using Python (OpenCV) pipelines and AWS SageMaker models via RESTful APIs on Microsoft Azure, enabling real-time computer vision, low-latency command communication, and IoT synchronization in industrial XR environments.",
+      "Created Section 508–compliant VR applications with Unity and Google Cardboard, integrating cross-platform C# development and real-time rendering optimizations to improve accessibility and engagement.",
+      "Delivered an educational VR training system for DHS by creating 3D assets in Blender, deploying in Unity, and integrating a React/Vite front end for real-time immersive visualization of DHS team operations.",
+    ],
+  },
+  {
+    company: "frog",
+    location: "Remote",
+    role: "Design Technologist Intern",
+    period: "January 2021 – April 2021",
+    bullets: [
+      "Built interactive XR prototypes with Unity and React, focusing on real-time visualization, usability, and functional user interaction.",
+      "Engineered secure backends using AWS and GraphQL for seamless cross-platform integration and scalable performance.",
+      "Prototyped an AR project using Unity, Adobe Aero, and Google Cardboard SDK to demonstrate cross-platform XR skills and real-time 3D visualization; presented to frog for evaluation.",
+    ],
+  },
+] as const;
+
 export const projects = [
   {
     name: "IcedMangoes",
@@ -126,15 +152,28 @@ export const skills = {
   other: ["Python", "Java", "C++", "C#", "SQL"],
   arVrCreative: [
     "Unity",
-    "Oculus",
-    "Virtual reality",
+    "Unreal Engine",
+    "HoloLens",
+    "Blender",
     "Google Cardboard",
+    "Oculus",
+    "GPU profiling",
+    "Latency optimization",
+    "TensorFlow (CNNs)",
+    "OpenCV",
+    "AWS SageMaker",
+    "Azure Cognitive Services",
+    "Spatial computing",
+    "Real-time rendering",
+    "Computer vision",
+    "Adobe Aero",
     "Quill",
     "Maya",
     "Adobe Premiere",
     "Photoshop",
     "Machine learning",
-    "pandas",
+    "Media streaming",
+    "IoT synchronization",
   ],
 } as const;
 

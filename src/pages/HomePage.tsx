@@ -5,11 +5,11 @@ import {
   devpostProjects,
   devpostUrl,
   experience,
+  experienceXr,
   skills,
   education,
 } from "@/data/resume";
 import { HexagonAvatar } from "@/components/HexagonAvatar";
-import { HeroStarPattern } from "@/components/HeroStarPattern";
 import { HeroThreeBackground } from "@/components/HeroThreeBackground";
 import { useParallax } from "@/hooks/useParallax";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
@@ -32,7 +32,7 @@ export function HomePage() {
         aria-labelledby="hero-heading"
         id="top"
       >
-        <HeroStarPattern />
+        {/* <HeroStarPattern /> */}
         <div className={styles.heroThreeWrap}>
           <HeroThreeBackground />
         </div>
@@ -193,6 +193,26 @@ export function HomePage() {
             </li>
           ))}
         </ul>
+        <h3 className={styles.skillsCategory}>XR & immersive</h3>
+        <ul className={styles.experienceList}>
+          {experienceXr.map((job) => (
+            <li key={`xr-${job.company}-${job.period}`} className={styles.job}>
+              <div className={styles.jobHeader}>
+                <span className={styles.company}>{job.company}</span>
+                <span className={styles.jobLocation}>{job.location}</span>
+              </div>
+              <div className={styles.jobRole}>
+                {job.role}
+                <span className={styles.period}> {job.period}</span>
+              </div>
+              <ul className={styles.bullets}>
+                {job.bullets.map((bullet, i) => (
+                  <li key={i}>{bullet}</li>
+                ))}
+              </ul>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section
@@ -252,9 +272,6 @@ export function HomePage() {
           <h2 id="contact-heading" className={styles.contactTitle}>
             Let's work together
           </h2>
-          <p className={styles.contactIntro}>
-            Open to design technologist and frontend engineering roles.
-          </p>
           <ul className={styles.contactList}>
             <li>
               <span className={styles.label}>Email</span>
