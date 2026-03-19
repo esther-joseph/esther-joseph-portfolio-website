@@ -149,7 +149,17 @@ export const skills = {
     "Docker",
     "Vercel",
   ],
-  other: ["Python", "Java", "C++", "C#", "SQL"],
+  programmingLanguages: ["C++", "Python", "C#", "TypeScript", "JavaScript", "Java", "SQL"],
+  communicationCollaboration: [
+    "Cross-functional collaboration",
+    "Stakeholder communication",
+    "Agile methodologies",
+    "Jira",
+    "Confluence",
+    "Azure DevOps",
+    "GitHub",
+    "Technical documentation",
+  ],
   arVrCreative: [
     "Unity",
     "Unreal Engine",

@@ -322,10 +322,24 @@ export function HomePage() {
           </section>
 
           <section className={styles.skillsCard} aria-label="Other skills">
-            <h3 className={styles.skillsCategory}>Other</h3>
+            <h3 className={styles.skillsCategory}>Programming languages</h3>
             <ul className={styles.skillsChips}>
-              {skills.other.map((s) => (
-                <li key={`other-${s}`} className={styles.skillChip}>
+              {skills.programmingLanguages.map((s) => (
+                <li key={`lang-${s}`} className={styles.skillChip}>
+                  {s}
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section
+            className={styles.skillsCard}
+            aria-label="Communication and collaboration skills"
+          >
+            <h3 className={styles.skillsCategory}>Communication & collaboration</h3>
+            <ul className={styles.skillsChips}>
+              {skills.communicationCollaboration.map((s) => (
+                <li key={`collab-${s}`} className={styles.skillChip}>
                   {s}
                 </li>
               ))}
