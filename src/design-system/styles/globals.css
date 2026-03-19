@@ -16,14 +16,14 @@ body {
   line-height: var(--leading-normal);
   color: var(--color-text);
   background: radial-gradient(
-      1200px 700px at 20% 10%,
-      rgba(184, 169, 201, 0.25),
-      transparent 55%
+      1000px 600px at 15% 15%,
+      rgba(209, 179, 153, 0.2),
+      transparent 50%
     ),
     radial-gradient(
-      900px 600px at 85% 15%,
-      rgba(245, 240, 235, 0.9),
-      transparent 50%
+      800px 500px at 88% 20%,
+      rgba(123, 104, 166, 0.08),
+      transparent 45%
     ),
     var(--color-bg);
   background-attachment: fixed;
