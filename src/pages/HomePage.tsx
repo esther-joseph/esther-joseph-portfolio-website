@@ -36,9 +36,7 @@ export function HomePage() {
     return {
       platforms: take(["HoloLens", "Oculus", "Google Cardboard"]),
       enginesTools: take(["Unity", "Unreal Engine", "Blender", "Adobe Aero"]),
-      performance: take(["GPU profiling", "Latency optimization", "Real-time rendering"]),
       aiCv: take(["OpenCV", "TensorFlow (CNNs)", "AWS SageMaker", "Azure Cognitive Services", "Computer vision", "Machine learning"]),
-      systems: take(["Media streaming", "IoT synchronization", "Spatial computing"]),
       creative: list.filter((s) =>
         ["Quill", "Maya", "Adobe Premiere", "Photoshop"].includes(s),
       ),
@@ -295,16 +293,6 @@ export function HomePage() {
                 <ul className={styles.skillsChips}>
                   {xr.aiCv.map((s) => (
                     <li key={`xr-aicv-${s}`} className={styles.skillChip}>
-                      {s}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h4 className={styles.skillsSubcategory}>Performance & systems</h4>
-                <ul className={styles.skillsChips}>
-                  {[...xr.performance, ...xr.systems].map((s) => (
-                    <li key={`xr-perf-${s}`} className={styles.skillChip}>
                       {s}
                     </li>
                   ))}
