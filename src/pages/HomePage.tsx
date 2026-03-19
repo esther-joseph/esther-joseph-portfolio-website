@@ -55,10 +55,6 @@ export function HomePage() {
             Frontend-focused Full Stack Engineer — secure, accessible web
             applications in regulated environments.
           </p>
-          <p className={styles.taglineSub}>
-            Design systems are my craft · Accessible interfaces are my passion
-          </p>
-          <p className={styles.location}>{contact.location}</p>
           <a href="#about" className={styles.scrollHint} aria-label="Scroll to content">
             Scroll
           </a>
@@ -68,7 +64,7 @@ export function HomePage() {
       <section
         ref={aboutRevealRef}
         id="about"
-        className={styles.section}
+        className={`${styles.section} ${styles.sectionWithAura}`}
         aria-labelledby="about-heading"
       >
         <h2 id="about-heading" className={styles.sectionTitle}>
@@ -79,7 +75,7 @@ export function HomePage() {
 
       <section
         id="projects"
-        className={styles.projectsSectionWrap}
+        className={`${styles.projectsSectionWrap} ${styles.sectionWithAura}`}
         aria-labelledby="projects-heading"
       >
         <div
@@ -129,9 +125,6 @@ export function HomePage() {
               </section>
             ))}
           </div>
-          <a href="#devpost-projects" className={styles.projectsViewAll}>
-            Hackathon & VR projects on Devpost →
-          </a>
           <section
             id="devpost-projects"
             className={styles.devpostSection}
@@ -169,16 +162,13 @@ export function HomePage() {
               View all on Devpost →
             </a>
           </section>
-          <a href="#experience" className={styles.projectsViewAll}>
-            View experience & skills →
-          </a>
         </div>
       </section>
 
       <section
         ref={experienceRevealRef}
         id="experience"
-        className={styles.section}
+        className={`${styles.section} ${styles.sectionWithAura}`}
         aria-labelledby="experience-heading"
       >
         <h2 id="experience-heading" className={styles.sectionTitle}>
@@ -208,7 +198,7 @@ export function HomePage() {
       <section
         ref={skillsRevealRef}
         id="skills"
-        className={styles.section}
+        className={`${styles.section} ${styles.sectionWithAura}`}
         aria-labelledby="skills-heading"
       >
         <h2 id="skills-heading" className={styles.sectionTitle}>
@@ -239,7 +229,7 @@ export function HomePage() {
       <section
         ref={educationRevealRef}
         id="education"
-        className={styles.section}
+        className={`${styles.section} ${styles.sectionWithAura}`}
         aria-labelledby="education-heading"
       >
         <h2 id="education-heading" className={styles.sectionTitle}>
@@ -255,7 +245,7 @@ export function HomePage() {
       <section
         ref={contactRevealRef}
         id="contact"
-        className={styles.contactWrap}
+        className={`${styles.contactWrap} ${styles.sectionWithAura}`}
         aria-labelledby="contact-heading"
       >
         <div className={styles.contactBlock}>
