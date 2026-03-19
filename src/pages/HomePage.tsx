@@ -40,6 +40,10 @@ export function HomePage() {
     };
   })();
 
+  const creativeSkills = skills.arVrCreative.filter((s) =>
+    ["Quill", "Maya", "Adobe Premiere", "Photoshop"].includes(s),
+  );
+
   return (
     <article className={styles.page}>
       <section
@@ -317,7 +321,7 @@ export function HomePage() {
             </ul>
             <h4 className={styles.skillsSubcategory}>Creative</h4>
             <ul className={styles.skillsChips}>
-              {xr.creative.map((s) => (
+              {creativeSkills.map((s) => (
                 <li key={`creative-${s}`} className={styles.skillChip}>
                   {s}
                 </li>
