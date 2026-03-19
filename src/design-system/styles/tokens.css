@@ -16,9 +16,9 @@
   /* Oatmeal accent - warm tan for highlights if needed */
   --color-oatmeal: #d1b399;
 
-  /* Typography */
-  --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
-    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  /* Typography (Oatmeal-style: Instrument Sans) */
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, -apple-system,
+    Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   --text-sm: 0.875rem;
   --text-md: 1rem;
   --text-lg: 1.125rem;
