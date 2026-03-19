@@ -523,14 +523,11 @@
   margin-top: var(--space-10);
   padding: var(--space-6) 0 var(--space-8);
   border-top: 1px solid var(--color-border);
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-4);
+  text-align: center;
 }
 
 .footerMeta {
-  margin: 0 0 0 auto;
+  margin: 0;
   font-size: var(--text-sm);
   color: var(--color-text-muted);
 }

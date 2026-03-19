@@ -9,12 +9,11 @@ import {
   education,
 } from "@/data/resume";
 import { HexagonAvatar } from "@/components/HexagonAvatar";
+import { HeroStarPattern } from "@/components/HeroStarPattern";
 import { HeroThreeBackground } from "@/components/HeroThreeBackground";
 import { useParallax } from "@/hooks/useParallax";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import styles from "./HomePage.module.css";
-
-const GITHUB_PROJECTS = "https://github.com/esther-joseph?tab=repositories";
 
 export function HomePage() {
   const heroParallaxRef = useParallax(0.25);
@@ -33,6 +32,7 @@ export function HomePage() {
         aria-labelledby="hero-heading"
         id="top"
       >
+        <HeroStarPattern />
         <div className={styles.heroThreeWrap}>
           <HeroThreeBackground />
         </div>
@@ -263,16 +263,6 @@ export function HomePage() {
               </a>
             </li>
             <li>
-              <span className={styles.label}>Phone</span>
-              <a href="tel:+14695349668" className={styles.contactLink}>
-                {contact.phone}
-              </a>
-            </li>
-            <li>
-              <span className={styles.label}>Location</span>
-              <span className={styles.contactValue}>{contact.location}</span>
-            </li>
-            <li>
               <span className={styles.label}>LinkedIn</span>
               <a
                 href={contact.linkedin}
@@ -310,17 +300,6 @@ export function HomePage() {
       </section>
 
       <footer className={styles.footer}>
-        <a
-          href={GITHUB_PROJECTS}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.ctaLink}
-        >
-          Projects on GitHub
-        </a>
-        <a href="#contact" className={styles.ctaLinkSecondary}>
-          Get in touch
-        </a>
         <p className={styles.footerMeta}>© {new Date().getFullYear()} Esther Joseph</p>
       </footer>
     </article>
