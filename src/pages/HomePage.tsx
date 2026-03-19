@@ -2,10 +2,14 @@ import {
   contact,
   summary,
   projects,
+  devpostProjects,
+  devpostUrl,
   experience,
   skills,
   education,
 } from "@/data/resume";
+import { HexagonAvatar } from "@/components/HexagonAvatar";
+import { HeroThreeBackground } from "@/components/HeroThreeBackground";
 import { useParallax } from "@/hooks/useParallax";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import styles from "./HomePage.module.css";
@@ -29,6 +33,9 @@ export function HomePage() {
         aria-labelledby="hero-heading"
         id="top"
       >
+        <div className={styles.heroThreeWrap}>
+          <HeroThreeBackground />
+        </div>
         <div
           ref={heroParallaxRef}
           className={styles.parallaxLayer}
@@ -40,6 +47,7 @@ export function HomePage() {
           aria-hidden
         />
         <div className={styles.hero}>
+          <HexagonAvatar />
           <h1 id="hero-heading" className={styles.name}>
             {contact.name}
           </h1>
@@ -121,6 +129,46 @@ export function HomePage() {
               </section>
             ))}
           </div>
+          <a href="#devpost-projects" className={styles.projectsViewAll}>
+            Hackathon & VR projects on Devpost →
+          </a>
+          <section
+            id="devpost-projects"
+            className={styles.devpostSection}
+            aria-labelledby="devpost-heading"
+          >
+            <h2 id="devpost-heading" className={styles.sectionTitle}>
+              Hackathon & VR projects
+            </h2>
+            <p className={styles.projectsIntro}>
+              VR, accessibility, and immersive experiences from hackathons. See full portfolio on{" "}
+              <a href={devpostUrl} target="_blank" rel="noopener noreferrer" className={styles.inlineLink}>
+                Devpost
+              </a>.
+            </p>
+            <ul className={styles.devpostList}>
+              {devpostProjects.map((proj) => (
+                <li key={proj.name} className={styles.devpostItem}>
+                  <span className={styles.devpostName}>
+                    {proj.name}
+                    {proj.highlight && (
+                      <span className={styles.devpostHighlight}> · {proj.highlight}</span>
+                    )}
+                  </span>
+                  <span className={styles.devpostStack}>{proj.stack}</span>
+                  <p className={styles.devpostDescription}>{proj.description}</p>
+                </li>
+              ))}
+            </ul>
+            <a
+              href={devpostUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.projectsViewAll}
+            >
+              View all on Devpost →
+            </a>
+          </section>
           <a href="#experience" className={styles.projectsViewAll}>
             View experience & skills →
           </a>
@@ -176,6 +224,10 @@ export function HomePage() {
             <p className={styles.skillsList}>
               {skills.backendDevOps.join(", ")}
             </p>
+          </div>
+          <div>
+            <h3 className={styles.skillsCategory}>AR/VR & creative</h3>
+            <p className={styles.skillsList}>{skills.arVrCreative.join(", ")}</p>
           </div>
           <div>
             <h3 className={styles.skillsCategory}>Other</h3>
@@ -250,6 +302,17 @@ export function HomePage() {
                 className={styles.contactLink}
               >
                 github.com/esther-joseph
+              </a>
+            </li>
+            <li>
+              <span className={styles.label}>Devpost</span>
+              <a
+                href={contact.devpost}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.contactLink}
+              >
+                devpost.com/esther8joseph
               </a>
             </li>
           </ul>

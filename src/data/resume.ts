@@ -51,6 +51,54 @@ export const projects = [
   },
 ] as const;
 
+/** Hackathon & VR projects from Devpost (https://devpost.com/esther8joseph) */
+export const devpostProjects = [
+  {
+    name: "VR_BRAVE",
+    description:
+      "A virtual reality app for mental health and relaxation. Built with a focus on immersive, calming experiences to support wellness.",
+    stack: "Unity • VR • Oculus",
+    highlight: null,
+  },
+  {
+    name: "Point of Intersection",
+    description:
+      "An immersive experience for your wait at the point of intersection. Hackathon winner.",
+    stack: "Unity • VR • Immersive experience",
+    highlight: "Winner",
+  },
+  {
+    name: "HCI_SportsVR (SportsViewing)",
+    description:
+      "Accessibility-focused design for hospitalized patients to view sports in virtual reality, enabling inclusive viewing experiences.",
+    stack: "Unity • VR • Accessibility • HCI",
+    highlight: null,
+  },
+  {
+    name: "Pith",
+    description:
+      "A virtual reality procedural dungeons game. Team-built VR game with procedural level generation.",
+    stack: "Unity • VR • C# • Game design",
+    highlight: null,
+  },
+  {
+    name: "Project Tranquil",
+    description:
+      "Stitching together cultural understanding through an immersive, collaborative experience.",
+    stack: "Unity • VR • Collaboration",
+    highlight: null,
+  },
+  {
+    name: "His Name is Turon",
+    description:
+      "A 48-hour VR game about a lost robot looking for his creator. Quick iteration and narrative-driven gameplay.",
+    stack: "Unity • VR • Game jam",
+    highlight: "48hr game jam",
+  },
+] as const;
+
+export const devpostUrl = "https://devpost.com/esther8joseph" as const;
+
 export const skills = {
   frontend: [
     "React",
@@ -76,6 +124,18 @@ export const skills = {
     "Vercel",
   ],
   other: ["Python", "Java", "C++", "C#", "SQL"],
+  arVrCreative: [
+    "Unity",
+    "Oculus",
+    "Virtual reality",
+    "Google Cardboard",
+    "Quill",
+    "Maya",
+    "Adobe Premiere",
+    "Photoshop",
+    "Machine learning",
+    "pandas",
+  ],
 } as const;
 
 export const summary =
@@ -88,6 +148,7 @@ export const contact = {
   phone: "(469) 534-9668",
   linkedin: "https://linkedin.com/in/esther-joseph-dev",
   github: "https://github.com/esther-joseph",
+  devpost: "https://devpost.com/esther8joseph",
 } as const;
 
 export const education = {
