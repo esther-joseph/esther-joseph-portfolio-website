@@ -25,6 +25,26 @@ export function HomePage() {
   const contactRevealRef = useScrollReveal();
   const educationRevealRef = useScrollReveal();
 
+  const xr = (() => {
+    const list = [...skills.arVrCreative];
+    const take = (items: string[]) => {
+      const set = new Set(items);
+      const picked = list.filter((s) => set.has(s));
+      return picked;
+    };
+
+    return {
+      platforms: take(["HoloLens", "Oculus", "Google Cardboard"]),
+      enginesTools: take(["Unity", "Unreal Engine", "Blender", "Adobe Aero"]),
+      performance: take(["GPU profiling", "Latency optimization", "Real-time rendering"]),
+      aiCv: take(["OpenCV", "TensorFlow (CNNs)", "AWS SageMaker", "Azure Cognitive Services", "Computer vision", "Machine learning"]),
+      systems: take(["Media streaming", "IoT synchronization", "Spatial computing"]),
+      creative: list.filter((s) =>
+        ["Quill", "Maya", "Adobe Premiere", "Photoshop"].includes(s),
+      ),
+    };
+  })();
+
   return (
     <article className={styles.page}>
       <section
@@ -225,24 +245,92 @@ export function HomePage() {
           Skills
         </h2>
         <div className={styles.skillsGrid}>
-          <div>
+          <section className={styles.skillsCard} aria-label="Frontend skills">
             <h3 className={styles.skillsCategory}>Frontend</h3>
-            <p className={styles.skillsList}>{skills.frontend.join(", ")}</p>
-          </div>
-          <div>
+            <ul className={styles.skillsChips}>
+              {skills.frontend.map((s) => (
+                <li key={`fe-${s}`} className={styles.skillChip}>
+                  {s}
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section className={styles.skillsCard} aria-label="Backend and DevOps skills">
             <h3 className={styles.skillsCategory}>Backend & DevOps</h3>
-            <p className={styles.skillsList}>
-              {skills.backendDevOps.join(", ")}
-            </p>
-          </div>
-          <div>
-            <h3 className={styles.skillsCategory}>AR/VR & creative</h3>
-            <p className={styles.skillsList}>{skills.arVrCreative.join(", ")}</p>
-          </div>
-          <div>
+            <ul className={styles.skillsChips}>
+              {skills.backendDevOps.map((s) => (
+                <li key={`be-${s}`} className={styles.skillChip}>
+                  {s}
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section className={styles.skillsCard} aria-label="XR and immersive skills">
+            <h3 className={styles.skillsCategory}>XR & immersive</h3>
+            <div className={styles.skillsSubgrid}>
+              <div>
+                <h4 className={styles.skillsSubcategory}>Platforms</h4>
+                <ul className={styles.skillsChips}>
+                  {xr.platforms.map((s) => (
+                    <li key={`xr-platform-${s}`} className={styles.skillChip}>
+                      {s}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h4 className={styles.skillsSubcategory}>Engines & tools</h4>
+                <ul className={styles.skillsChips}>
+                  {xr.enginesTools.map((s) => (
+                    <li key={`xr-tools-${s}`} className={styles.skillChip}>
+                      {s}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h4 className={styles.skillsSubcategory}>AI & computer vision</h4>
+                <ul className={styles.skillsChips}>
+                  {xr.aiCv.map((s) => (
+                    <li key={`xr-aicv-${s}`} className={styles.skillChip}>
+                      {s}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h4 className={styles.skillsSubcategory}>Performance & systems</h4>
+                <ul className={styles.skillsChips}>
+                  {[...xr.performance, ...xr.systems].map((s) => (
+                    <li key={`xr-perf-${s}`} className={styles.skillChip}>
+                      {s}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <h4 className={styles.skillsSubcategory}>Creative</h4>
+            <ul className={styles.skillsChips}>
+              {xr.creative.map((s) => (
+                <li key={`xr-creative-${s}`} className={styles.skillChip}>
+                  {s}
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section className={styles.skillsCard} aria-label="Other skills">
             <h3 className={styles.skillsCategory}>Other</h3>
-            <p className={styles.skillsList}>{skills.other.join(", ")}</p>
-          </div>
+            <ul className={styles.skillsChips}>
+              {skills.other.map((s) => (
+                <li key={`other-${s}`} className={styles.skillChip}>
+                  {s}
+                </li>
+              ))}
+            </ul>
+          </section>
         </div>
       </section>
 
