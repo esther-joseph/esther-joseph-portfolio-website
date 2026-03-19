@@ -37,9 +37,6 @@ export function HomePage() {
       platforms: take(["HoloLens", "Oculus", "Google Cardboard"]),
       enginesTools: take(["Unity", "Unreal Engine", "Blender", "Adobe Aero"]),
       aiCv: take(["OpenCV", "TensorFlow (CNNs)", "AWS SageMaker", "Azure Cognitive Services", "Computer vision", "Machine learning"]),
-      creative: list.filter((s) =>
-        ["Quill", "Maya", "Adobe Premiere", "Photoshop"].includes(s),
-      ),
     };
   })();
 
@@ -299,14 +296,6 @@ export function HomePage() {
                 </ul>
               </div>
             </div>
-            <h4 className={styles.skillsSubcategory}>Creative</h4>
-            <ul className={styles.skillsChips}>
-              {xr.creative.map((s) => (
-                <li key={`xr-creative-${s}`} className={styles.skillChip}>
-                  {s}
-                </li>
-              ))}
-            </ul>
           </section>
 
           <section className={styles.skillsCard} aria-label="Programming languages and collaboration skills">
