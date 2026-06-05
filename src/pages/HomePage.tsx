@@ -210,27 +210,47 @@ export function HomePage() {
             <h2>Tools &amp; skills</h2>
           </div>
           <div className={styles.skillsGrid}>
-            {skills.map((s) => (
-              <div key={s.title} className={`${styles.skillset} ${s.sub ? styles.skillsetWide : ""}`}>
+            {/* Frontend */}
+            {skills.filter(s => s.title === "Frontend").map((s) => (
+              <div key={s.title} className={styles.skillset}>
                 <span className={`${styles.label} ${styles.skillsetLabel}`}>{s.title}</span>
-                {s.sub ? (
-                  s.sub.map((sub) => (
-                    <div key={sub.label} className={styles.skillSub}>
-                      <span className={`${styles.label} ${styles.skillSubLabel}`}>{sub.label}</span>
-                      <div className={styles.chips}>
-                        {sub.items.map((item) => (
-                          <span key={item} className={styles.chip}>{item}</span>
-                        ))}
-                      </div>
-                    </div>
-                  ))
-                ) : (
+                <div className={styles.chips}>
+                  {s.items!.map((item) => <span key={item} className={styles.chip}>{item}</span>)}
+                </div>
+              </div>
+            ))}
+            {/* Backend & DevOps */}
+            {skills.filter(s => s.title === "Backend & DevOps").map((s) => (
+              <div key={s.title} className={styles.skillset}>
+                <span className={`${styles.label} ${styles.skillsetLabel}`}>{s.title}</span>
+                <div className={styles.chips}>
+                  {s.items!.map((item) => <span key={item} className={styles.chip}>{item}</span>)}
+                </div>
+              </div>
+            ))}
+            {/* Languages + Compliance grouped to eliminate gap */}
+            <div className={styles.skillsetGroup}>
+              {skills.filter(s => ["Languages", "Compliance & process"].includes(s.title)).map((s) => (
+                <div key={s.title} className={styles.skillset}>
+                  <span className={`${styles.label} ${styles.skillsetLabel}`}>{s.title}</span>
                   <div className={styles.chips}>
-                    {s.items!.map((item) => (
-                      <span key={item} className={styles.chip}>{item}</span>
-                    ))}
+                    {s.items!.map((item) => <span key={item} className={styles.chip}>{item}</span>)}
                   </div>
-                )}
+                </div>
+              ))}
+            </div>
+            {/* XR & Immersive — full width */}
+            {skills.filter(s => s.sub).map((s) => (
+              <div key={s.title} className={`${styles.skillset} ${styles.skillsetWide}`}>
+                <span className={`${styles.label} ${styles.skillsetLabel}`}>{s.title}</span>
+                {s.sub!.map((sub) => (
+                  <div key={sub.label} className={styles.skillSub}>
+                    <span className={`${styles.label} ${styles.skillSubLabel}`}>{sub.label}</span>
+                    <div className={styles.chips}>
+                      {sub.items.map((item) => <span key={item} className={styles.chip}>{item}</span>)}
+                    </div>
+                  </div>
+                ))}
               </div>
             ))}
           </div>

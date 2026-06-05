@@ -467,6 +467,7 @@
 
 .skillset { display: flex; flex-direction: column; }
 .skillsetWide { grid-column: 1 / -1; }
+.skillsetGroup { display: flex; flex-direction: column; gap: clamp(1.8rem, 3.5vw, 3rem); }
 
 .skillsetLabel {
   display: block;
