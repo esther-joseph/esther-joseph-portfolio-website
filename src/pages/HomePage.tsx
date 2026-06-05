@@ -111,7 +111,7 @@ export function HomePage() {
             </p>
             <div className={styles.stats}>
               <div className={styles.stat}>
-                <span className={styles.statNum}>3<span>+</span></span>
+                <span className={styles.statNum}>4<span>+</span></span>
                 <span className={styles.statCap}>Years building<br />for federal ops</span>
               </div>
               <div className={styles.stat}>
