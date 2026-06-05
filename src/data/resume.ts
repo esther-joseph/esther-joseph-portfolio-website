@@ -157,6 +157,11 @@ export const skills = [
     sub: null,
   },
   {
+    title: "Compliance & process",
+    items: ["WCAG / ADA", "Section 508", "USWDS", "Agile", "Jira", "Confluence", "Azure DevOps", "Technical documentation"],
+    sub: null,
+  },
+  {
     title: "XR & Immersive",
     items: null,
     sub: [
@@ -164,11 +169,6 @@ export const skills = [
       { label: "Engines & tools", items: ["Unity", "Unreal Engine", "Three.js", "Blender", "Quill", "Substance Painter", "Maya", "Adobe Aero"] },
       { label: "AI & computer vision", items: ["OpenCV", "TensorFlow (CNNs)", "AWS SageMaker", "Azure Cognitive Services", "Real-time rendering"] },
     ],
-  },
-  {
-    title: "Compliance & process",
-    items: ["WCAG / ADA", "Section 508", "USWDS", "Agile", "Jira", "Confluence", "Azure DevOps", "Technical documentation"],
-    sub: null,
   },
 ] as const;
 
