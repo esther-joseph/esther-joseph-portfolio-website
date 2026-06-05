@@ -466,6 +466,7 @@
 }
 
 .skillset { display: flex; flex-direction: column; }
+.skillsetWide { grid-column: 1 / -1; }
 
 .skillsetLabel {
   display: block;

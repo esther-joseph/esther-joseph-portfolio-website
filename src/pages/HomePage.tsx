@@ -211,7 +211,7 @@ export function HomePage() {
           </div>
           <div className={styles.skillsGrid}>
             {skills.map((s) => (
-              <div key={s.title} className={styles.skillset}>
+              <div key={s.title} className={`${styles.skillset} ${s.sub ? styles.skillsetWide : ""}`}>
                 <span className={`${styles.label} ${styles.skillsetLabel}`}>{s.title}</span>
                 {s.sub ? (
                   s.sub.map((sub) => (
