@@ -109,27 +109,35 @@
 }
 .val a:hover { border-color: var(--clay); color: var(--clay-deep); }
 
-/* Portrait placeholder */
+/* Portrait */
 .portraitCol {
   display: flex;
   flex-direction: column;
-  gap: 0.7rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.portraitWrap {
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 1 / 1;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  overflow: hidden;
+  background: var(--paper-3);
 }
 
 .portrait {
   width: 100%;
-  flex: 1 1 auto;
-  min-height: 440px;
-  aspect-ratio: 4 / 5;
-  border: 1px solid var(--line-strong);
-  background:
-    repeating-linear-gradient(135deg, var(--paper-2) 0 11px, var(--paper-3) 11px 22px);
-  border-radius: 2px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 .portraitCap {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: baseline;
 }
 

@@ -77,7 +77,13 @@ export function HomePage() {
             </div>
           </div>
           <div className={styles.portraitCol}>
-            <div className={styles.portrait} aria-hidden />
+            <div className={styles.portraitWrap}>
+              <img
+                src="/profile.png"
+                alt="Esther Joseph"
+                className={styles.portrait}
+              />
+            </div>
             <div className={styles.portraitCap}>
               <span className={styles.label}>EST. TX</span>
             </div>
