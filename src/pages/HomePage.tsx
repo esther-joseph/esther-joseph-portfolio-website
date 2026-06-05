@@ -77,7 +77,12 @@ export function HomePage() {
             </div>
           </div>
           <div className={styles.portraitCol}>
-            <div className={styles.portraitWrap} aria-hidden />
+            <img
+              src="/hero-bg.png"
+              alt=""
+              aria-hidden
+              className={styles.portrait}
+            />
             <div className={styles.portraitCap}>
               <span className={styles.label}>EST. TX</span>
             </div>
