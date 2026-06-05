@@ -19,7 +19,6 @@ export const experience = [
     bullets: [
       "Shipped 190+ production tasks within one year across 8 federal DHS applications, with 60%+ rated Exceptional, via GitLab/Jenkins CI/CD pipelines with rollback and disaster-recovery failover.",
       "Migrated a legacy static codebase to React with TypeScript and architected a USWDS-based component library used across 8+ federal applications, completing 133 stories across 2 years with full ADA and WCAG compliance.",
-      "Shipped 190+ production tasks in one year for a high-priority legacy Angular application via GitLab and Jenkins CI/CD pipelines, maintaining rollback and disaster-recovery failover across all deployments.",
       "Architected a USWDS-based component library ensuring ADA and WCAG compliance across 8+ federal applications, standardizing UI patterns and enabling compliance-ready feature development.",
     ],
   },
