@@ -9,17 +9,8 @@
   --muted-2:      #a69dba;
   --line:         rgba(39, 34, 49, 0.13);
   --line-strong:  rgba(39, 34, 49, 0.26);
-  /* Accents pulled from hero-bg image */
-  --wood:         #b8935a;  /* warm branch tan */
-  --wood-deep:    #9a7640;  /* darker branch */
-  --dust:         #7e9db8;  /* dusty blue buds */
-  --dust-deep:    #5f7d99;  /* deeper blue */
-  --sage:         #8aab82;  /* muted leaf green */
-  --sage-deep:    #6a8c62;
-
-  /* legacy alias — kept so any stray var(--clay) still resolves */
-  --clay:         var(--wood);
-  --clay-deep:    var(--wood-deep);
+  --clay:         #6f55c0;
+  --clay-deep:    #54409a;
 
   --sans: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
