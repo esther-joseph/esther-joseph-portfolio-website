@@ -1,61 +1,75 @@
 export const experience = [
   {
     company: "Figgy",
+    org: null as string | null,
     location: "Remote",
     role: "Software Developer Consultant",
-    period: "April 2025 – Present",
+    period: "Apr 2025 — Present",
     bullets: [
       "Implemented real-time booking workflows and role-based access control using Supabase authentication and JWT validation to support secure multi-user scheduling.",
-      "Delivered mobile-responsive, accessible UI components to improve usability for small business operators and neuro-diverse users.",
+      "Delivered mobile-responsive, WCAG-compliant UI components to improve usability for small-business operators and neurodiverse users.",
     ],
   },
   {
-    company: "Ellumen (Contracted by Department of Homeland Security)",
+    company: "Ellumen",
+    org: "Contracted by Dept. of Homeland Security" as string | null,
     location: "Remote",
     role: "Software Developer",
-    period: "January 2022 – March 2025",
+    period: "Jan 2022 — Mar 2025",
     bullets: [
-      "Architected and implemented a reusable, accessible React component system using USWDS, standardizing UI patterns across multiple internal DHS applications used by federal operators and enabling consistent, compliance-ready feature development.",
-      "Led a front-end refactor of a legacy Angular application, migrating to modern React patterns, integrating SonarQube for static analysis, and enforcing code quality gates and test coverage standards.",
-      "Designed and automated CI/CD pipelines in GitLab and Jenkins with rollback strategies, enabling zero-downtime deployments and maintaining compliance in a federally regulated environment.",
-      "Developed a Java-based data retrieval tool with PostgreSQL and Docker to generate audit-ready CSV reports, supporting compliance workflows and improving visibility into system data flows.",
+      "Shipped 190+ production tasks within one year across 8 federal DHS applications, with 60%+ rated Exceptional, via GitLab/Jenkins CI/CD pipelines with rollback and disaster-recovery failover.",
+      "Migrated a legacy Angular codebase to React + TypeScript, enforcing code quality via SonarQube and completing 133 stories across two years on a high-priority project.",
+      "Architected a USWDS-based component library ensuring ADA and WCAG compliance across 8+ federal applications, standardizing UI patterns and enabling compliance-ready feature development.",
     ],
   },
   {
     company: "frog",
-    location: "Remote",
+    org: null as string | null,
+    location: "Remote · Austin, TX",
     role: "Design Technologist Intern",
-    period: "January 2021 – April 2021",
+    period: "Jan 2021 — Apr 2021",
     bullets: [
-      "Built a modular TypeScript + React component system for a financial wellness platform, aligning UI behavior with design specifications and improving consistency across user flows.",
-      "Developed responsive UI layouts using Material UI and Flexbox from Figma designs, creating reusable templates that streamlined handoff between design and engineering.",
-      "Integrated AWS Cognito with GraphQL-based authentication flows, implementing JWT validation and secure session handling to enforce role-based access control.",
+      "Built a modular React + TypeScript component system in 3 months, improving design-to-engineering handoff consistency across all user flows for a financial-wellness platform.",
+      "Developed responsive Material UI layouts from Figma specs, creating reusable templates that streamlined handoff between design and engineering.",
+      "Integrated AWS Cognito with GraphQL/Prisma authentication flows, implementing JWT validation and secure session handling to enforce role-based access control.",
     ],
   },
 ] as const;
 
-/** XR/VR-focused experience (from XR resume) */
 export const experienceXr = [
   {
-    company: "Ellumen (Contracted by Department of Homeland Security)",
-    location: "Remote",
-    role: "Software Developer",
-    period: "January 2022 – Present",
+    company: "Ellumen",
+    org: "Contracted by Dept. of Homeland Security" as string | null,
+    location: "Remote · Washington D.C.",
+    role: "Software Developer — XR",
+    period: "Jan 2022 — Mar 2025",
     bullets: [
-      "Developed an AI-powered AR communication interface for HoloLens using Python (OpenCV) pipelines and AWS SageMaker models via RESTful APIs on Microsoft Azure, enabling real-time computer vision, low-latency command communication, and IoT synchronization in industrial XR environments.",
-      "Created Section 508–compliant VR applications with Unity and Google Cardboard, integrating cross-platform C# development and real-time rendering optimizations to improve accessibility and engagement.",
-      "Delivered an educational VR training system for DHS by creating 3D assets in Blender, deploying in Unity, and integrating a React/Vite front end for real-time immersive visualization of DHS team operations.",
+      "Led end-to-end XR engineering across 12 sprints on a classified HoloLens inspection prototype for DHS — sole assignee across 32+ Jira tickets spanning computer-vision pipelines, 3D spatial manipulation, AI/ML model training, and real-time AR UI — culminating in a full recorded HoloLens demo delivered to federal stakeholders.",
+      "Built real-time trademark/logo identification in AR using Python (OpenCV) HAAR classifiers and AWS SageMaker models deployed via REST APIs on Azure, including image-annotation pipelines, S3 integration, 50%-confidence match filtering, and a live AI toggle within the HoloLens UI.",
+      "Engineered the HoloLens frontend in Unity (C#): 3D object-scan workflows, results and failure panels, heads-up display research, minimizable world-view objects, and a Figma-to-Unity bridge for design-to-AR handoff.",
+      "Researched and executed a backend migration from Azure to AWS for the AI/ML system, leading model-training optimization to improve image-prediction accuracy.",
     ],
   },
   {
     company: "frog",
-    location: "Remote",
-    role: "Design Technologist Intern",
-    period: "January 2021 – April 2021",
+    org: null as string | null,
+    location: "Remote · Austin, TX",
+    role: "Design Technologist Intern — XR",
+    period: "Jan 2021 — Apr 2021",
     bullets: [
-      "Built interactive XR prototypes with Unity and React, focusing on real-time visualization, usability, and functional user interaction.",
-      "Engineered secure backends using AWS and GraphQL for seamless cross-platform integration and scalable performance.",
-      "Prototyped an AR project using Unity, Adobe Aero, and Google Cardboard SDK to demonstrate cross-platform XR skills and real-time 3D visualization; presented to frog for evaluation.",
+      "Prototyped an AR project in Adobe Aero showcasing the people of frog, visualized as tarot cards to illustrate their individual biographies and contributions; presented to frog leadership for internship evaluation.",
+    ],
+  },
+  {
+    company: "SpaceCRAFT",
+    org: "Under the advisement of NASA · Texas A&M University" as string | null,
+    location: "College Station, TX",
+    role: "Undergraduate Research Student",
+    period: "Sep 2016 — May 2019",
+    bullets: [
+      "Visualized extraterrestrial environments — simulating the Moon and Mars surfaces — in VR to enable cost-efficient testing and mitigate errors before fabrication; built in Unreal Engine (C++) with Blender 3D assets.",
+      "Designed and implemented a modular VR keyboard asset in Unreal Engine for UI/UX operations across SpaceCRAFT simulations.",
+      "Implemented Python + TensorFlow CNN-based object detection for a rover VR simulation to identify geological obstacles modeled on the Gale crater.",
     ],
   },
 ] as const;
@@ -63,132 +77,100 @@ export const experienceXr = [
 export const projects = [
   {
     name: "IcedMangoes",
+    kind: "Full-stack commerce",
     description:
-      "Full-Stack Artist Commerce Platform. Architected and implemented a full-stack commerce platform supporting dynamic product listings and secure checkout flows; applied service-layer architecture to decouple business logic from presentation; integrated Stripe Checkout with webhook validation for transactional integrity; containerized services with Docker and deployed via Vercel with environment-scoped configuration.",
-    stack: "Next.js • Django • Supabase • Stripe • Tailwind • Docker",
+      "Full-stack artist commerce platform template with Stripe Checkout, webhook validation, and Docker-containerized services. Service-layer architecture separates business logic from presentation; deployed via Vercel with environment-scoped config.",
+    stack: "Next.js · Django · Supabase · Stripe · Tailwind · Docker",
     href: "https://github.com/esther-joseph/icedmangoes",
   },
   {
     name: "City in a Snowglobe",
+    kind: "AR weather app · in review on Google Play",
     description:
-      "AR Weather App. Engineered an interactive AR weather application using Three.js and real-time forecast APIs to render dynamic 3D environmental simulations within a snowglobe interface; implemented optimized render loops and asynchronous data handling; structured responsive UI architecture to ensure smooth mobile performance and maintain rendering stability under asynchronous data updates.",
-    stack: "React • TypeScript • Three.js • Vite • REST APIs",
+      "Real-time AR snowglobe weather app rendering dynamic 3D environmental simulations from live forecast APIs, with optimized render loops for smooth mobile performance. Currently under review by the Google Play Store.",
+    stack: "React · TypeScript · Three.js · WebXR · REST",
     href: "https://github.com/esther-joseph/city-in-a-snowglobe",
   },
 ] as const;
 
-/** Hackathon & VR projects from Devpost (https://devpost.com/esther8joseph) */
 export const devpostProjects = [
   {
-    name: "VR_BRAVE",
+    name: "Meditation VR for Veterans with PTSD",
+    badge: null as string | null,
+    stack: "Unity · C# · HTC Vive · Quest 2 · LeapMotion",
     description:
-      "A virtual reality app for mental health and relaxation. Built with a focus on immersive, calming experiences to support wellness.",
-    stack: "Unity • VR • Oculus",
-    highlight: null,
+      "A VR app for mental health and relaxation, designed as an accessible, calming environment for emotional regulation and stress relief.",
   },
   {
-    name: "Point of Intersection",
+    name: "DivHack",
+    badge: "$300 Winner" as string | null,
+    stack: "Unity · C# · Google VR Cardboard",
     description:
-      "An immersive experience for your wait at the point of intersection. Hackathon winner.",
-    stack: "Unity • VR • Immersive experience",
-    highlight: "Winner",
-  },
-  {
-    name: "HCI_SportsVR (SportsViewing)",
-    description:
-      "Accessibility-focused design for hospitalized patients to view sports in virtual reality, enabling inclusive viewing experiences.",
-    stack: "Unity • VR • Accessibility • HCI",
-    highlight: null,
-  },
-  {
-    name: "Pith",
-    description:
-      "A virtual reality procedural dungeons game. Team-built VR game with procedural level generation.",
-    stack: "Unity • VR • C# • Game design",
-    highlight: null,
-  },
-  {
-    name: "Project Tranquil",
-    description:
-      "Stitching together cultural understanding through an immersive, collaborative experience.",
-    stack: "Unity • VR • Collaboration",
-    highlight: null,
+      "Award-winning VR Cardboard demo visualizing a garden space to raise awareness for diversity at Texas A&M.",
   },
   {
     name: "His Name is Turon",
+    badge: "48hr jam" as string | null,
+    stack: "Unity · C# · Oculus Quest · Quill",
     description:
-      "A 48-hour VR game about a lost robot looking for his creator. Quick iteration and narrative-driven gameplay.",
-    stack: "Unity • VR • Game jam",
-    highlight: "48hr game jam",
+      "Chillenium game jam: a VR game about a lost robot searching for its creator, built from scratch in 48 hours with 3D assets authored in Quill.",
+  },
+  {
+    name: "Pith",
+    badge: null as string | null,
+    stack: "HTC Vive · Unity · C# · Substance Painter · Maya",
+    description:
+      "VR procedural-dungeon game with a full gameplay loop and original 3D assets painted in Substance Painter.",
+  },
+  {
+    name: "Healthcare Accessibility VR",
+    badge: null as string | null,
+    stack: "Unity · C# · Google Cardboard",
+    description:
+      "VR application improving access for hospitalized patients to view live sports, applying task analysis and inclusive XR design.",
+  },
+  {
+    name: "Aggies Invent VR/AR",
+    badge: null as string | null,
+    stack: "HoloLens · Cloud Networking · IoT",
+    description:
+      "Envisioned an AR cloud-networked IoT interface for cross-command communication in manufacturing environments.",
   },
 ] as const;
 
 export const devpostUrl = "https://devpost.com/esther8joseph" as const;
 
-export const skills = {
-  frontend: [
-    "React",
-    "Angular",
-    "TypeScript",
-    "JavaScript",
-    "Tailwind",
-    "CSS (Flexbox, Grid)",
-    "Material UI",
-    "USWDS",
-    "Figma",
-  ],
-  backendDevOps: [
-    "Django",
-    "Node.js",
-    "GraphQL",
-    "Supabase",
-    "Prisma",
-    "AWS (Cognito, S3, EC2)",
-    "GitHub/GitLab",
-    "Jenkins",
-    "Docker",
-    "Vercel",
-  ],
-  programmingLanguages: ["C++", "Python", "C#", "TypeScript", "JavaScript", "Java", "SQL"],
-  communicationCollaboration: [
-    "Cross-functional collaboration",
-    "Stakeholder communication",
-    "Agile methodologies",
-    "Jira",
-    "Confluence",
-    "Azure DevOps",
-    "GitHub",
-    "Technical documentation",
-  ],
-  arVrCreative: [
-    "Unity",
-    "Unreal Engine",
-    "HoloLens",
-    "Blender",
-    "Google Cardboard",
-    "Oculus",
-    "GPU profiling",
-    "Latency optimization",
-    "TensorFlow (CNNs)",
-    "OpenCV",
-    "AWS SageMaker",
-    "Azure Cognitive Services",
-    "Spatial computing",
-    "Real-time rendering",
-    "Computer vision",
-    "Adobe Aero",
-    "Quill",
-    "Maya",
-    "Adobe Premiere",
-    "Photoshop",
-    "Machine learning",
-    "Media streaming",
-    "IoT synchronization",
-  ],
-} as const;
-
-export const summary =
-  "Frontend-focused Full Stack Engineer specializing in secure, accessible web applications in regulated environments. Experienced in React, TypeScript, Django, and CI/CD automation with cloud-native deployments across AWS and Supabase ecosystems. Focused on scalable system design, performance optimization, and accessible interface engineering.";
+export const skills = [
+  {
+    title: "Frontend",
+    items: ["React", "Angular", "TypeScript", "JavaScript", "Tailwind", "CSS (Flexbox, Grid)", "Material UI", "USWDS", "Figma", "HTML/CSS"],
+    sub: null,
+  },
+  {
+    title: "Backend & DevOps",
+    items: ["Django", "Node.js", "GraphQL", "Supabase", "Prisma", "AWS (Cognito, SageMaker, S3, EC2)", "Azure", "GitHub / GitLab", "Jenkins", "Docker", "Vercel"],
+    sub: null,
+  },
+  {
+    title: "Languages",
+    items: ["TypeScript", "JavaScript", "Python", "C#", "C++", "Java", "SQL"],
+    sub: null,
+  },
+  {
+    title: "XR & Immersive",
+    items: null,
+    sub: [
+      { label: "Platforms", items: ["HoloLens", "Oculus / Quest", "HTC Vive", "Google Cardboard", "WebXR"] },
+      { label: "Engines & tools", items: ["Unity", "Unreal Engine", "Three.js", "Blender", "Quill", "Substance Painter", "Maya", "Adobe Aero"] },
+      { label: "AI & computer vision", items: ["OpenCV", "TensorFlow (CNNs)", "AWS SageMaker", "Azure Cognitive Services", "Real-time rendering"] },
+    ],
+  },
+  {
+    title: "Compliance & process",
+    items: ["WCAG / ADA", "Section 508", "USWDS", "Agile", "Jira", "Confluence", "Azure DevOps", "Technical documentation"],
+    sub: null,
+  },
+] as const;
 
 export const contact = {
   name: "Esther Joseph",
@@ -202,7 +184,9 @@ export const contact = {
 
 export const education = {
   school: "Texas A&M University",
-  location: "College Station, Texas",
+  location: "College Station, TX",
   degree: "B.S. in Computer Science",
-  period: "August 2015 – May 2020",
+  period: "2015 — 2020",
+  coursework: "Virtual Reality · Human-Computer Interaction · Machine Learning · Artificial Intelligence · Software Engineering · Data Structures & Algorithms · Undergraduate Engineering Research",
+  activities: "Member of TAMU VR (Virtual & Augmented Reality) · Undergraduate research student under a former NASA astronaut on SpaceCRAFT.",
 } as const;

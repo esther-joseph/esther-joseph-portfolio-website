@@ -1,87 +1,42 @@
 import { useState } from "react";
-import { Outlet, Link } from "react-router-dom";
-import { contact } from "@/data/resume";
+import { Outlet } from "react-router-dom";
 import styles from "./Layout.module.css";
 
 export function Layout() {
-  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const closeDrawer = () => setDrawerOpen(false);
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <div className={styles.layout}>
-      <header className={styles.header}>
-        <button
-          type="button"
-          className={styles.menuButton}
-          onClick={() => setDrawerOpen(true)}
-          aria-expanded={drawerOpen ? "true" : "false"}
-          aria-controls="drawer"
-          aria-label="Open menu"
-        >
-          <span className={styles.menuIcon} aria-hidden>
-            ☰
-          </span>
-        </button>
-        <Link to="/" className={styles.logo} onClick={closeDrawer}>
-          Esther Joseph
-        </Link>
-      </header>
-
-      <div
-        id="drawer"
-        className={styles.drawer}
-        data-open={drawerOpen}
-        aria-hidden={drawerOpen ? "false" : "true"}
-      >
-        <div
-          className={styles.drawerBackdrop}
-          onClick={closeDrawer}
-          aria-hidden
-        />
-        <aside className={styles.drawerPanel}>
+      <header className={styles.bar}>
+        <div className={styles.barInner}>
+          <a href="#top" className={styles.wordmark} onClick={closeMenu}>
+            <span className={styles.dot} />
+            ESTHER&nbsp;JOSEPH
+          </a>
           <button
             type="button"
-            className={styles.closeButton}
-            onClick={closeDrawer}
-            aria-label="Close menu"
+            className={styles.menuBtn}
+            aria-expanded={menuOpen ? "true" : "false"}
+            aria-controls="primary-nav"
+            onClick={() => setMenuOpen((o) => !o)}
           >
-            ×
+            {menuOpen ? "CLOSE" : "MENU"}
           </button>
-          <nav className={styles.drawerNav} aria-label="Main">
-            <a
-              href="#top"
-              className={styles.drawerLink}
-              onClick={closeDrawer}
-            >
-              Home
-            </a>
-            <a
-              href="#experience"
-              className={styles.drawerLink}
-              onClick={closeDrawer}
-            >
-              Works
-            </a>
-            <a
-              href="#contact"
-              className={styles.drawerLink}
-              onClick={closeDrawer}
-            >
-              Contact
-            </a>
-            <a
-              href={contact.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.drawerLinkExternal}
-              onClick={closeDrawer}
-            >
-              GitHub
-            </a>
+          <nav
+            id="primary-nav"
+            className={`${styles.primaryNav} ${menuOpen ? styles.open : ""}`}
+            aria-label="Sections"
+          >
+            <a href="#about" onClick={closeMenu}>About</a>
+            <a href="#experience" onClick={closeMenu}>Experience</a>
+            <a href="#projects" onClick={closeMenu}>Work</a>
+            <a href="#skills" onClick={closeMenu}>Skills</a>
+            <a href="#contact" onClick={closeMenu}>Contact</a>
           </nav>
-        </aside>
-      </div>
+        </div>
+      </header>
 
       <main className={styles.main}>
         <Outlet />
