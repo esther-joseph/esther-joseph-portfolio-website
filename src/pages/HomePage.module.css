@@ -24,6 +24,10 @@
   border-bottom: 1px solid var(--line);
   padding-left: var(--gutter);
   padding-right: var(--gutter);
+  background-image: url("/hero-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .heroGrid {
